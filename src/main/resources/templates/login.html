@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Login App</title>
+    <link rel="stylesheet" href="../static/bootstrap.min.css" th:href="@{/bootstrap.min.css}"/>
+    <script type="text/javascript" src="/static/angular.min.js" th:src="@{/angular.min.js}"></script>
+    <script type="text/javascript" src="/static/app/users.controller.js" th:src="@{/app/users.controller.js}"></script>
+</head>
+<body ng-app="app" ng-controller="UsersController">
+<h1>Login</h1>
+<form id="usernameform">
+    <div class="form-group">
+        <label for="usernameInput">Benutzername</label>
+        <input ng-model="usernameIn" type="text" class="form-control" id="usernameInput" />
+    </div>
+    <button ng-click="getUser()" type="button" class="btn btn-default">Weiter</button>
+</form>
+<form id="passwordform" style="display:none">
+    <div class="form-group">
+        <label for="passwordInput">Passwort</label>
+        <input ng-model="passwordIn" type="password" class="form-control" id="passwordInput"/>
+    </div>
+    <button ng-click="back()" type="button" class="btn btn-default">Zurück</button>
+    <button ng-click="validatePassword()" type="button" class="btn btn-default">Weiter</button>
+</form>
+<div id="confirmation" style="display:none">
+    <h1>Login erfolgreich</h1>
+    <h2>Willkommen {{userName}}!</h2>
+    <button ng-click="logoff()" type="button" class="btn btn-default">Abmelden</button>
+</div>
+</body>
+</html>
