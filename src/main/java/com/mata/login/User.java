@@ -5,6 +5,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+/**
+ * Autor: Marco Mata
+ * Description: Data class for the User entity, with getter
+ */
 @Entity
 public class User {
 
@@ -37,7 +41,7 @@ public class User {
         return password;
     }
 
-    public String isActivated() {
+    public String getActivated() {
         return activated;
     }
 

@@ -7,6 +7,10 @@ import org.springframework.stereotype.Component;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Author: Marco Mata
+ * Description: This is a CommandLineRunner class, which feeds the database with four users
+ */
 @Component
 public class DatabaseSeeder implements CommandLineRunner {
 

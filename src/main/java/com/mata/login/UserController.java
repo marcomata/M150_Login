@@ -6,7 +6,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-
+/**
+ * Autor: Marco Mata
+ * Description: RestController which controls the http requests for user data
+ */
 @RestController
 @RequestMapping("/users")
 public class UserController {

@@ -1,3 +1,4 @@
+<!-- Autor: Marco Mata -->
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -8,7 +9,7 @@
     <script type="text/javascript" src="/static/app/users.controller.js" th:src="@{/app/users.controller.js}"></script>
 </head>
 <body ng-app="app" ng-controller="UsersController">
-<h1>Login</h1>
+<h1>Login {{status}}</h1>
 <form id="usernameform">
     <div class="form-group">
         <label for="usernameInput">Benutzername</label>
@@ -21,13 +22,13 @@
         <label for="passwordInput">Passwort</label>
         <input ng-model="passwordIn" type="password" class="form-control" id="passwordInput"/>
     </div>
-    <button ng-click="back()" type="button" class="btn btn-default">Zurück</button>
+    <button ng-click="reload()" type="button" class="btn btn-default">Zurück</button>
     <button ng-click="validatePassword()" type="button" class="btn btn-default">Weiter</button>
 </form>
 <div id="confirmation" style="display:none">
     <h1>Login erfolgreich</h1>
     <h2>Willkommen {{userName}}!</h2>
-    <button ng-click="logoff()" type="button" class="btn btn-default">Abmelden</button>
+    <button ng-click="reload()" type="button" class="btn btn-default">Abmelden</button>
 </div>
 </body>
 </html>
